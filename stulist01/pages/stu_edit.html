@@ -3,16 +3,15 @@
   修改学生信息
 {% end %}
 
-{% block students %} 
+{% block content %} 
 	<a href="/stulist">返回学生名单</a>
 	<hr>
 	<form action="/stuedit/{{student['stu_sn']}}" method="post">
-    学号：<input type="text" name="cou_no" value="{{student['cou_no']}}"><br>
+    学号：<input type="text" name="stu_no" value="{{student['stu_no']}}"><br>
     姓名：<input type="text" name="name" value="{{student['name']}}"> <br>
-    出生日期：<input type="text" name="birthday" value="{{student['birthday']}}"> <br>
     性别：<input type="text" name="sex" value="{{student['sex']}}"> <br>
-    班级：<input type="text" name="class" value="{{student['class']}}"> <br>
-    说  明：<input type="text" name="notes" value="{{student['notes'] if student['notes'] is not None else ''}}">
+    出生日期：<input type="date" name="birthday" value="{{student['birthday']}}"> <br>
+    班级：<input type="text" name="banji" value="{{student['banji']}}"> <br>
     <input type="submit" value="提交">
     </form>
 
