@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} 
+  课程清单  
+{% end %}
+
+{% block content %}
+	<a href="stuedit/new">新建学生名单</a>
+	<hr>
+	<table>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>出生日期</td>
+			<td>性别</td>
+			<td>班级</td>
+			<td>说明</td>
+		</tr>
+		{% for cou in students %}
+		<tr>
+			<td>{{ stu['cou_no'] }}</td>
+			<td>{{ stu['name'] }}</td>
+			<td>{{ stu['birthday'] }}</td>
+			<td>{{ stu['sex'] }}</td>
+			<td>{{ stu['class'] }}</td>
+			<td>{{ stu['notes'] if cou['notes'] is not None else '' }}</td>
+			<td>
+				<a href="stuedit/{{stu['cou_sn']}}"> 修改 </a> &nbsp;
+				<a href="studel/{{stu['cou_sn']}}"> 删除 </a>
+			</td>
+		</tr>
+		{% end %}
+	</table> 
+{% end %}
