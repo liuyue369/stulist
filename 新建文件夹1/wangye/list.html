@@ -1,0 +1,30 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>浏览学生名单
+</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>出生日期</td>
+			<td>性别</td>
+			<td>班级</td>
+		</tr>
+		{% for cou in students %}
+		<tr>
+		     <td>{{ cou['no'] }}</td>
+		     <td>{{ cou['name'] }}</td>
+		     <td>{{ cou['birthday'] }}</td>
+		     <td>{{ cou['sex'] }}</td>
+		     <td>{{ cou['banji'] }}</td>
+		 </tr>
+		 {% end %}
+	</table>
+<a href="/">返回主页</a>
+
+
+</body>
+</html>

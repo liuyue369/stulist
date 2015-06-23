@@ -1,0 +1,35 @@
+
+	body {
+	font-family: "ËÎÌו", "¿¬Ìו", sans-serif;
+	color: blue;
+}
+
+
+
+
+
+#a {
+	font-size: 80%;
+	line-height: 170%;
+	margin:5px 0px;
+	padding:0px;
+	list-style:none;	
+	float:left;	
+}
+
+#a li {
+	float:left;
+	background-color: orange;
+	margin-right: 5px;
+	margin-left: 0px;
+	border: 1px solid #000;
+	text-align: center;
+	width: 100px;
+	height:28px;
+}
+
+
+
+
+
+/
